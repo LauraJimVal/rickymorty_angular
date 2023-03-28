@@ -1,0 +1,15 @@
+<h1>Rick and Morty characters</h1>
+<div class="container d-flex flex-row justify-content-evenly">
+    <div *ngFor="let item of data" class="card mb-4" style="width: 18rem;" >
+      <img [src]="item.image" class="card-img-top" [alt]="item.name">
+      <div class="card-body">
+        <h4 class="card-title">{{ item.name }}</h4>
+        <br>
+        <p class="card-text">{{ item.species }} ({{ item.gender }})</p>
+        <p class="card-text ribbon">Origin: {{ item.origin.name}}</p>
+        <p class="card-text ribbon">Status: {{ item.status }}</p>
+      </div>
+    </div>
+</div>
+
+
